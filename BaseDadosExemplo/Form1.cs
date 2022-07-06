@@ -10,6 +10,10 @@ using System.Windows.Forms;
 using System.IO;
 // SQL Server CE
 using System.Data.SqlServerCe;
+// SQLite
+using System.Data.SQLite;
+// MySQL
+using MySql.Data.MySqlClient;
 
 namespace BaseDadosExemplo
 {
@@ -22,33 +26,65 @@ namespace BaseDadosExemplo
 
         private void btnConectar_Click(object sender, EventArgs e)
         {
-            string baseDados = Application.StartupPath + @"\db\DBSQLServer.sdf";
-            string strConection = @"DataSourse = " +baseDados+ "; Password = '1234'";
+            #region SQL SERVER CE
+            //string baseDados = Application.StartupPath + @"\db\DBSQLServer.sdf";
+            //string strConection = @"DataSourse = " + baseDados + "; Password = '1234'";
 
-            SqlCeEngine db = new SqlCeEngine(strConection);
+            //SqlCeEngine db = new SqlCeEngine(strConection);
+
+            //if (!File.Exists(baseDados))
+            //{
+            //    db.CreateDatabase();
+            //}
+            //db.Dispose();
+
+            //SqlCeConnection conexao = new SqlCeConnection(strConection);
+
+            //try
+            //{
+            //    conexao.Open();
+            //    labelResultado.Text = "Conectado Sql Server CE";
+            //}
+            //catch (Exception ex)
+            //{
+            //    labelResultado.Text = "Erro ao Conectar Sql Server CE \n" + ex;
+            //}
+            //finally
+            //{
+            //    conexao.Close();
+            //}
+            #endregion
+
+            #region SQLite
+            string baseDados = Application.StartupPath + @"\db\DBSQLite.db";
+            string strConection = @"Data Sourse = " + baseDados + "; Version = 3";
 
             if (!File.Exists(baseDados))
             {
-                db.CreateDatabase();
+                SQLiteConnection.CreateFile(baseDados);
             }
-            db.Dispose();
 
-            SqlCeConnection conexao = new SqlCeConnection(strConection);
+            SQLiteConnection conexao = new SQLiteConnection(strConection);
+            conexao.ConnectionString = strConection;
 
             try
             {
                 conexao.Open();
-                labelResultado.Text = "Conectado Sql Server CE";
+                labelResultado.Text = "Conectado SQLite";
             }
             catch (Exception ex)
             {
-                labelResultado.Text = "Erro ao Conectar Sql Server CE \n" + ex;
+                labelResultado.Text = "Erro ao Conectar SQLite \n" + ex;
             }
             finally
             {
                 conexao.Close();
             }
+            #endregion
 
+            #region MySQL
+
+            #endregion
         }
     }
 }

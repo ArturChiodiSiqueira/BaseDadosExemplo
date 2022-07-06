@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+// SQL Server CE
+using System.Data.SqlServerCe;
 
 namespace BaseDadosExemplo
 {
@@ -19,6 +22,17 @@ namespace BaseDadosExemplo
 
         private void btnConectar_Click(object sender, EventArgs e)
         {
+            string baseDados = Application.StartupPath + @"\db\DBSQLServer.sdf";
+            string strConection = @"DataSourse = " +baseDados+ "; Password = '1234'";
+
+            SqlCeEngine db = new SqlCeEngine(strConection);
+
+            if (!File.Exists(baseDados))
+            {
+                db.CreateDatabase();
+            }
+            db.Dispose();
+
 
         }
     }

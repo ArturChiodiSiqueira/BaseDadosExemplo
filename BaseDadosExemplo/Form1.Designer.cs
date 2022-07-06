@@ -139,53 +139,58 @@
             // 
             // btnCriarTabela
             // 
+            this.btnCriarTabela.BackColor = System.Drawing.SystemColors.Control;
             this.btnCriarTabela.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCriarTabela.Location = new System.Drawing.Point(570, 285);
             this.btnCriarTabela.Name = "btnCriarTabela";
             this.btnCriarTabela.Size = new System.Drawing.Size(143, 46);
             this.btnCriarTabela.TabIndex = 7;
             this.btnCriarTabela.Text = "criar tabela";
-            this.btnCriarTabela.UseVisualStyleBackColor = true;
+            this.btnCriarTabela.UseVisualStyleBackColor = false;
             // 
             // btnInserir
             // 
+            this.btnInserir.BackColor = System.Drawing.SystemColors.Control;
             this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.Location = new System.Drawing.Point(570, 337);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(143, 46);
             this.btnInserir.TabIndex = 8;
             this.btnInserir.Text = "inserir";
-            this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.UseVisualStyleBackColor = false;
             // 
             // btnProcurar
             // 
+            this.btnProcurar.BackColor = System.Drawing.SystemColors.Control;
             this.btnProcurar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProcurar.Location = new System.Drawing.Point(570, 389);
             this.btnProcurar.Name = "btnProcurar";
             this.btnProcurar.Size = new System.Drawing.Size(143, 46);
             this.btnProcurar.TabIndex = 9;
             this.btnProcurar.Text = "procurar";
-            this.btnProcurar.UseVisualStyleBackColor = true;
+            this.btnProcurar.UseVisualStyleBackColor = false;
             // 
             // btnExcluir
             // 
+            this.btnExcluir.BackColor = System.Drawing.SystemColors.Control;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Location = new System.Drawing.Point(570, 441);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(143, 46);
             this.btnExcluir.TabIndex = 10;
             this.btnExcluir.Text = "excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.UseVisualStyleBackColor = false;
             // 
             // btnEditar
             // 
+            this.btnEditar.BackColor = System.Drawing.SystemColors.Control;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(570, 493);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(143, 46);
             this.btnEditar.TabIndex = 11;
             this.btnEditar.Text = "editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 

@@ -33,7 +33,13 @@ namespace BaseDadosExemplo
             }
             db.Dispose();
 
+            SqlCeConnection conexao = new SqlCeConnection(strConection);
 
+            conexao.Open();
+
+            labelResultado.Text = "Conectado Sql Server CE";
+
+            conexao.Close();
         }
     }
 }

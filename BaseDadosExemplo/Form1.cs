@@ -16,5 +16,10 @@ namespace BaseDadosExemplo
         {
             InitializeComponent();
         }
+
+        private void btnConectar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

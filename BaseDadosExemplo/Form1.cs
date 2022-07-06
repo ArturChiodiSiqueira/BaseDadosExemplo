@@ -35,11 +35,20 @@ namespace BaseDadosExemplo
 
             SqlCeConnection conexao = new SqlCeConnection(strConection);
 
-            conexao.Open();
+            try
+            {
+                conexao.Open();
+                labelResultado.Text = "Conectado Sql Server CE";
+            }
+            catch (Exception ex)
+            {
+                labelResultado.Text = "Erro ao Conectar Sql Server CE \n" + ex;
+            }
+            finally
+            {
+                conexao.Close();
+            }
 
-            labelResultado.Text = "Conectado Sql Server CE";
-
-            conexao.Close();
         }
     }
 }

@@ -81,9 +81,34 @@ namespace BaseDadosExemplo
                 conexao.Close();
             }
             #endregion
+        }
 
-            #region MySQL
+        private void btnCriarTabela_Click(object sender, EventArgs e)
+        {
+            #region SQLite
+            string baseDados = Application.StartupPath + @"\db\DBSQLite.db";
+            string strConection = @"Data Sourse = " + baseDados + "; Version = 3";
 
+            SQLiteConnection conexao = new SQLiteConnection(strConection);
+
+            try
+            {
+                conexao.Open();
+
+                SQLiteCommand comando = new SQLiteCommand();
+                comando.Connection = conexao;
+
+                comando.CommandText = "CREATE TABLE pessoas ( id INT NOT NULL PRIMARY KEY, nome NVARCHAR(50), email NVARCHAR(50)";
+                comando.ExecuteNonQuery();
+
+                labelResultado.Text = "Tabela Criada SQLite";
+                comando.Dispose();
+            }
+            catch (Exception ex)
+            {
+                labelResultado.Text = ex.Message;
+            }
+            finally { conexao.Close(); }
             #endregion
         }
     }

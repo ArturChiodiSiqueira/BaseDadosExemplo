@@ -148,6 +148,7 @@
             this.btnCriarTabela.TabIndex = 7;
             this.btnCriarTabela.Text = "criar tabela";
             this.btnCriarTabela.UseVisualStyleBackColor = false;
+            this.btnCriarTabela.Click += new System.EventHandler(this.btnCriarTabela_Click);
             // 
             // btnInserir
             // 
